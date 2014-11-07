@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapQueenCMS", "CapQueenCMS\CapQueenCMS.csproj", "{D4FEA433-57CC-4602-BC4E-8573D9B977CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapQueen.Auth", "CapQueen.Auth\CapQueen.Auth.csproj", "{2C8C627A-C43E-4B51-A749-1B6D07B7400D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D4FEA433-57CC-4602-BC4E-8573D9B977CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4FEA433-57CC-4602-BC4E-8573D9B977CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4FEA433-57CC-4602-BC4E-8573D9B977CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C8C627A-C43E-4B51-A749-1B6D07B7400D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C8C627A-C43E-4B51-A749-1B6D07B7400D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C8C627A-C43E-4B51-A749-1B6D07B7400D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C8C627A-C43E-4B51-A749-1B6D07B7400D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
