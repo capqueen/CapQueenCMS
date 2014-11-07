@@ -1,45 +1,64 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
-
 <!DOCTYPE html>
-
-<html>
+<!-- saved from url=(0037)http://daneden.github.io/animate.css/ -->
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Welcome</title>
-    <style type="text/css">
-        .linear {
-            width: 100%;
-            height: 600px;
-            FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#b8c4cb,endColorStr=red); /*IE 6 7 8*/
-            background: -ms-linear-gradient(top, #fff, #0000ff); /* IE 10 */
-            background: -moz-linear-gradient(top,#b8c4cb,#f6f6f8); /*火狐*/
-            background: -webkit-gradient(linear, 0% 0%, 0% 100%,from(#b8c4cb), to(#f6f6f8)); /*谷歌*/
-            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#0000ff)); /* Safari 4-5, Chrome 1-9*/
-            background: -webkit-linear-gradient(top, #fff, #0000ff); /*Safari5.1 Chrome 10+*/
-            background: -o-linear-gradient(top, #fff, #0000ff); /*Opera 11.10+*/
-        }
-        .img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            z-index: -10;
-            background-position: center 0;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-            -webkit-background-size: cover;
-            -o-background-size: cover;
-            zoom: 1;
-        }
-    </style> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>CapQueen</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, minimal-ui">
+    <link rel="dns-prefetch" href="http://fonts.googleapis.com/">
+    <link rel="dns-prefetch" href="http://code.jquery.com/">
+    <link href="@Url.Content("welcome.css")" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://daneden.github.io/animate.css/animate.min.css">
+    <link rel="stylesheet" href="http://daneden.github.io/animate.css/style.css">
 </head>
 <body>
-    <div class="linear">
-    </div>
+    <header class="site__header island">
+        <div class="wrap">
+            <span id="animationSandbox" style="display: block;" class=""><h1 class="site__title mega">CapQueen Coming Soon...</h1></span>
+            <span class="beta subhead" style="padding-left: 200px;font-size: 10px;">--- <a href="http://www.cnblogs.com/capqueen/">SunGan's Blog</a> @@ Shanghai</span>
+        </div>
+    </header><!-- /.site__header -->
+    <main class="site__content island" role="content">
+        <div class="wrap">
+            <hr>
+            <p class="meta">友情链接：<a href="http://aehyok.com/">aehyok</a> | <a href="http://970369.com/">970369</a> | <a href="http://www.vipout.xyz/">唯爱品傲</a> | <a href="http://www.pengbg.com/" class="last">teemo</a></p>
+            <p><small>About CapQUeen <a href="http://www.cnblogs.com/capqueen/">CapQueen</a>.</small></p>
+        </div>
+    </main><!-- /.site__content -->
+    <script src="./Animate.css_files/jquery-1.10.2.min.js"></script>
+    <script>
+        function testAnim(x) {
+            $('#animationSandbox').removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                $(this).removeClass();
+            });
+        };
+        function GetRandomNum(Min, Max) {
+            var Range = Max - Min;
+            var Rand = Math.random();
+            return (Min + Math.round(Rand * Range));
+        }
+        $(document).ready(function () {
+            $('.js--triggerAnimation').click(function (e) {
+                e.preventDefault();
+                var anim = $('.js--animations').val();
+                testAnim(anim);
+            });
+
+            $('.js--animations').change(function () {
+                var anim = $(this).val();
+                testAnim(anim);
+            });
+            $('.wrap').click(function() {
+                var anim = new Array('bounce', 'flash', 'pulse', 'rubberBand', 'shake', 'swing', 'tada', 'wobble', 'bounceIn', 'bounceInDown', 'bounceInLeft', 'bounceInRight', 'bounceInUp', 'bounceOut', 'bounceOutDown', 'bounceOutLeft', 'bounceOutRight', 'bounceOutUp', 'fadeIn', 'fadeInDown', 'fadeInDownBig', 'fadeInLeft', 'fadeInLeftBig', 'fadeInRight', 'fadeInRightBig', 'fadeInUp', 'fadeInUpBig', 'fadeOut', 'fadeOutDown', 'fadeOutDownBig', 'fadeOutLeft', 'fadeOutLeftBig', 'fadeOutRight', 'fadeOutRightBig', 'fadeOutUp', 'fadeOutUpBig', 'flip', 'flipInX', 'flipInY', 'flipOutX', 'flipOutY', 'lightSpeedIn', 'lightSpeedOut', 'rotateIn', 'rotateInDownLeft', 'rotateInDownRight', 'rotateInUpLeft', 'rotateInUpRight', 'rotateOut', 'rotateOutDownLeft', 'rotateOutDownRight', 'rotateOutUpLeft', 'rotateOutUpRight', 'hinge', 'rollIn', 'rollOut', 'zoomIn', 'zoomInDown', 'zoomInLeft', 'zoomInRight', 'zoomInUp', 'zoomOut', 'zoomOutDown', 'zoomOutLeft', 'zoomOutRight', 'zoomOutUp');
+                var index = GetRandomNum(0, 65);
+                testAnim(anim[index]);
+            });
+        });
+
+    </script>
 </body>
 </html>
